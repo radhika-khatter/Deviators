@@ -19,7 +19,7 @@ export default function AboutSection() {
   }, [isHovering]);
 
   return (
-    <section className="relative min-h-screen w-full bg-gradient-to-b from-black via-[#0D0B21] to-[#1E1144]">
+    <section id="about" className="relative min-h-screen w-full bg-gradient-to-b from-black via-[#0D0B21] to-[#1E1144]">
       {/* Subtle star effect with adjusted gradient */}
       <div className="absolute inset-0">
         <div className="absolute h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent opacity-40" />

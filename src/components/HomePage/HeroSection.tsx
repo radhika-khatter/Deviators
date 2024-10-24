@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { activities } from "@/data/heroSection";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import socials from "@/data/socials";
 
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,7 +21,7 @@ export default function HeroSection() {
   }, [isHovering]);
 
   return (
-    <section className="min-h-screen bg-black flex items-center text-white overflow-hidden relative">
+    <section id="home" className="min-h-screen bg-black flex items-center text-white overflow-hidden relative">
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
           animate={{
@@ -68,25 +70,33 @@ export default function HeroSection() {
               </p>
 
               <p className="text-gray-400 max-w-xl">
-                Whether you&apos;re a newbie or seasoned coder, we provide a platform full of innovation, learnings, and fun. Let&apos;s build and push the boundaries of what&apos;s possible together!
+                Whether you&apos;re a newbie or seasoned coder, we provide a
+                platform full of innovation, learnings, and fun. Let&apos;s
+                build and push the boundaries of what&apos;s possible together!
               </p>
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link
+                href={
+                  socials.find((social) => social.name === "Discord")?.url ?? ""
+                }
               >
-                <span className="relative z-10 text-base sm:text-lg font-medium flex items-center justify-center gap-2">
-                  Join the Rebellion
-                  <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ mixBlendMode: "overlay" }}
-                />
-              </motion.button>
+                <motion.button
+                  className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 text-base sm:text-lg font-medium flex items-center justify-center gap-2">
+                    Join the Rebellion
+                    <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                    style={{ mixBlendMode: "overlay" }}
+                  />
+                </motion.button>
+              </Link>
             </div>
           </div>
 
