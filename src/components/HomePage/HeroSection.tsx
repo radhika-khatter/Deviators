@@ -55,7 +55,7 @@ export default function HeroSection() {
             >
               <div className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
                 <span className="text-sm sm:text-base text-blue-400">
-                  Join 5000+ developers
+                  Join our community
                 </span>
               </div>
 
@@ -68,7 +68,7 @@ export default function HeroSection() {
               </p>
 
               <p className="text-gray-400 max-w-xl">
-                Whether you're a newbie or seasoned coder, we provide a platform full of innovation, learnings, and fun. Let's build and push the boundaries of what's possible together!
+                Whether you&apos;re a newbie or seasoned coder, we provide a platform full of innovation, learnings, and fun. Let&apos;s build and push the boundaries of what&apos;s possible together!
               </p>
             </motion.div>
 
