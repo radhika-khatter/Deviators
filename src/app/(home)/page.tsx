@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import HeroSection from '../components/HomePage/HeroSection'
+import HeroSection from '@/components/HomePage/HeroSection'
 import AboutSection from '@/components/HomePage/AboutSection'
 import TeamSection from '@/components/HomePage/TeamSection'
 

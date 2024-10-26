@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { activities } from "@/data/heroSection";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import socials from "@/data/socials";
+
+import posts from "@/data/posts";
 
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -21,7 +23,10 @@ export default function HeroSection() {
   }, [isHovering]);
 
   return (
-    <section id="home" className="min-h-screen bg-black flex items-center text-white overflow-hidden relative">
+    <section
+      id="home"
+      className="min-h-screen bg-black flex items-center text-white overflow-hidden relative"
+    >
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
           animate={{
@@ -97,6 +102,28 @@ export default function HeroSection() {
                   />
                 </motion.button>
               </Link>
+
+              {posts.length > 0 && (
+                <Link href="/we-are-hiring">
+                  <motion.button
+                    className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-600 to-orange-600 rounded-lg overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className="relative z-10 text-base sm:text-lg font-medium flex items-center justify-center gap-2">
+                      We&apos;re Hiring
+                      <BriefcaseIcon className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                      <span className="flex items-center justify-center w-5 h-5 text-xs font-bold bg-white text-pink-600 rounded-full ml-1">
+                        {posts.length}
+                      </span>
+                    </span>
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                      style={{ mixBlendMode: "overlay" }}
+                    />
+                  </motion.button>
+                </Link>
+              )}
             </div>
           </div>
 
