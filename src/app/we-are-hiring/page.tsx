@@ -11,6 +11,8 @@ import { Calendar, ExternalLink } from "lucide-react";
 import posts from "@/data/posts";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { POST } from "@/types/post";
+import { Metadata } from "next";
+import { metaDataBase } from "@/data/metaData";
 
 interface PostCardProps {
   post: POST;
@@ -122,3 +124,8 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  ...metaDataBase,
+  title: "We're Hiring | Deviators Club",
+};

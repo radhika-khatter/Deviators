@@ -17,7 +17,7 @@ const socials = [
   },
   {
     name: "Discord",
-    url: "https://discord.gg/ggFYgedh2x",
+    url: "https://discord.gg/n9aDPwRK6N",
   },
   {
     name: "Linktree",

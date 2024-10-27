@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState } from "react";
 import {
@@ -8,18 +7,10 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import navItems from "@/data/navItems";
 
-const Navbar = ({
-  navItems,
-  className,
-}: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
-  className?: string;
-}) => {
+export default function Navbar({ className }: { className?: string }) {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
@@ -56,31 +47,27 @@ const Navbar = ({
           duration: 0.2,
         }}
         className={cn(
-          "fixed inset-x-0 top-10 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2] dark:bg-black sm:py-4",
+          "fixed inset-x-0 top-10 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-full border border-white/20 bg-black px-8 py-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] sm:py-4",
           className,
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <div
+        {navItems.map((navItem, idx: number) => (
+          <Link
             key={`link=${idx}`}
-            onClick={() => {
-              const element = document.getElementById(navItem.link);
-              console.log(element, navItem.link);
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            href={navItem.link}
             className={cn(
-              "relative flex cursor-pointer items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300",
+              "group relative flex cursor-pointer items-center space-x-1",
             )}
           >
-            <span className="block">{navItem.icon}</span>
-            <span className="hidden text-sm sm:block">{navItem.name}</span>
-          </div>
+            <span className="block">
+              <navItem.icon className="h-4 w-4 text-neutral-500 group-hover:text-white" />
+            </span>
+            <span className="hidden text-sm text-neutral-600 group-hover:text-white sm:block">
+              {navItem.name}
+            </span>
+          </Link>
         ))}
       </motion.div>
     </AnimatePresence>
   );
-};
-
-export default Navbar;
+}
