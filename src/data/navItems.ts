@@ -19,7 +19,7 @@ const navItems = [
   },
   {
     name: "Team",
-    link: "/#team",
+    link: "/team",
     icon: UsersIcon,
   },
   {

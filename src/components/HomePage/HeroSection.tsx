@@ -6,7 +6,6 @@ import { activities } from "@/data/heroSection";
 import { ArrowRightIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import socials from "@/data/socials";
-
 import posts from "@/data/posts";
 
 export default function HeroSection() {
@@ -21,6 +20,9 @@ export default function HeroSection() {
     }, 4000);
     return () => clearInterval(interval);
   }, [isHovering]);
+
+  const buttonBaseClass =
+    "group relative overflow-hidden rounded-lg px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto min-w-[200px]";
 
   return (
     <section
@@ -52,7 +54,6 @@ export default function HeroSection() {
         onMouseLeave={() => setIsHovering(false)}
       >
         <div className="relative grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Updated Left Content */}
           <div className="relative z-10 space-y-6 sm:space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -86,9 +87,10 @@ export default function HeroSection() {
                 href={
                   socials.find((social) => social.name === "Discord")?.url ?? ""
                 }
+                className="w-full sm:w-auto"
               >
                 <motion.button
-                  className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 sm:px-8 sm:py-4"
+                  className={`${buttonBaseClass} bg-gradient-to-r from-blue-600 to-purple-600`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -104,12 +106,12 @@ export default function HeroSection() {
               </Link>
 
               {posts.length > 0 && (
-                <motion.button
-                  className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-pink-600 to-orange-600 px-6 py-3 sm:px-8 sm:py-4"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link href="/we-are-hiring">
+                <Link href="/we-are-hiring" className="w-full sm:w-auto">
+                  <motion.button
+                    className={`${buttonBaseClass} bg-gradient-to-r from-pink-600 to-orange-600`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <span className="relative z-10 flex items-center justify-center gap-2 text-base font-medium sm:text-lg">
                       We&apos;re Hiring
                       <BriefcaseIcon className="h-4 w-4 transition-transform group-hover:rotate-12" />
@@ -121,8 +123,8 @@ export default function HeroSection() {
                       className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 opacity-0 transition-opacity group-hover:opacity-100"
                       style={{ mixBlendMode: "overlay" }}
                     />
-                  </Link>
-                </motion.button>
+                  </motion.button>
+                </Link>
               )}
             </div>
           </div>
