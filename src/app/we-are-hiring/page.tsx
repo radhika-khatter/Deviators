@@ -25,14 +25,12 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
 
   return (
     <Card
-      className={`
-        bg-[#1A1A2E]/50 border-[#2A2A4A] backdrop-blur-sm 
-        ${expired ? "opacity-75" : "hover:border-purple-500/50"} 
-        transition-colors shadow-lg relative
-      `}
+      className={`border-[#2A2A4A] bg-[#1A1A2E]/50 backdrop-blur-sm ${expired ? "opacity-75" : "hover:border-purple-500/50"} relative shadow-lg transition-colors`}
     >
       <CardHeader>
-        <CardTitle className="text-white mb-5 text-lg xl:text-xl">{post.title}</CardTitle>
+        <CardTitle className="mb-5 text-lg text-white xl:text-xl">
+          {post.title}
+        </CardTitle>
         <CardDescription className="text-gray-300">
           {post.description}
         </CardDescription>
@@ -50,14 +48,11 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         </div>
 
         <Button
-          className={`
-            w-full gap-2 shadow-md
-            ${
-              expired
-                ? "bg-gray-600 cursor-not-allowed opacity-50"
-                : "bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 border-0"
-            }
-          `}
+          className={`w-full gap-2 shadow-md ${
+            expired
+              ? "cursor-not-allowed bg-gray-600 opacity-50"
+              : "border-0 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+          } `}
           asChild={!expired}
           disabled={expired}
         >
@@ -87,12 +82,12 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0F0F1A] via-[#1A1A2E] to-[#2A1A3A] text-white">
-      <div className="container mx-auto py-16 px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+      <div className="container mx-auto px-4 py-16">
+        <div className="mb-16 text-center">
+          <h1 className="mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-5xl font-bold text-transparent">
             We&apos;re Hiring!
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg text-gray-300">
             Join our rebellion and help us push the boundaries of what&apos;s
             possible.
           </p>
@@ -105,12 +100,12 @@ export default function Page() {
             ))}
           </div>
         ) : (
-          <Card className="max-w-2xl mx-auto bg-[#1A1A2E]/50 border-[#2A2A4A] backdrop-blur-sm shadow-lg">
-            <CardContent className="text-center py-12">
-              <h3 className="text-2xl font-semibold mb-4 text-white">
+          <Card className="mx-auto max-w-2xl border-[#2A2A4A] bg-[#1A1A2E]/50 shadow-lg backdrop-blur-sm">
+            <CardContent className="py-12 text-center">
+              <h3 className="mb-4 text-2xl font-semibold text-white">
                 No Positions Available
               </h3>
-              <p className="text-gray-300 mb-6">
+              <p className="mb-6 text-gray-300">
                 We don&apos;t have any positions right now, but the rebellion is
                 always growing!
               </p>

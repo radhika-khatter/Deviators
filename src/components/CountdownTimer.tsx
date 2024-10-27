@@ -35,7 +35,7 @@ export const CountdownTimer = ({ expiresOn }: { expiresOn: Date }) => {
   }, [expiresOn]);
 
   return (
-    <div className="flex items-center gap-2 text-sm text-yellow-400 mb-4">
+    <div className="mb-4 flex items-center gap-2 text-sm text-yellow-400">
       <Clock size={16} />
       <span>
         Expires in: {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}

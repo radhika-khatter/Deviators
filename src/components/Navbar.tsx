@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
-import { EnvelopeIcon, HomeIcon, UserIcon, UsersIcon } from "@heroicons/react/24/outline";
+import {
+  EnvelopeIcon,
+  HomeIcon,
+  UserIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline";
 import Navbar from "./ui/floating-navbar";
 export default function FloatingNavbar() {
   const navItems = [

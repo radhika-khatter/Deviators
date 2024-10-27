@@ -25,7 +25,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-black flex items-center text-white overflow-hidden relative"
+      className="relative flex min-h-screen items-center overflow-hidden bg-black text-white"
     >
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
@@ -38,7 +38,7 @@ export default function HeroSection() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="w-[800px] h-[800px] blur-[100px] opacity-30"
+          className="h-[800px] w-[800px] opacity-30 blur-[100px]"
           style={{
             background:
               "conic-gradient(from 0deg at 50% 50%, #3B82F6, #8B5CF6, #EC4899, #3B82F6)",
@@ -47,82 +47,82 @@ export default function HeroSection() {
       </div>
 
       <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative"
+        className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
+        <div className="relative grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Updated Left Content */}
-          <div className="space-y-6 sm:space-y-8 relative z-10">
+          <div className="relative z-10 space-y-6 sm:space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-4"
             >
-              <div className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
-                <span className="text-sm sm:text-base text-blue-400">
+              <div className="inline-block rounded-full border border-blue-500/20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-4 py-1">
+                <span className="text-sm text-blue-400 sm:text-base">
                   Join our community
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <h1 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl lg:text-6xl">
                 DEVIATORS CLUB
               </h1>
 
-              <p className="text-xl sm:text-2xl text-gray-300 max-w-xl">
+              <p className="max-w-xl text-xl text-gray-300 sm:text-2xl">
                 Welcome to Deviators – The coolest tech haven on the campus!
               </p>
 
-              <p className="text-gray-400 max-w-xl">
+              <p className="max-w-xl text-gray-400">
                 Whether you&apos;re a newbie or seasoned coder, we provide a
                 platform full of innovation, learnings, and fun. Let&apos;s
                 build and push the boundaries of what&apos;s possible together!
               </p>
             </motion.div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href={
                   socials.find((social) => social.name === "Discord")?.url ?? ""
                 }
               >
                 <motion.button
-                  className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden"
+                  className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 sm:px-8 sm:py-4"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="relative z-10 text-base sm:text-lg font-medium flex items-center justify-center gap-2">
+                  <span className="relative z-10 flex items-center justify-center gap-2 text-base font-medium sm:text-lg">
                     Join the Rebellion
-                    <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 transition-opacity group-hover:opacity-100"
                     style={{ mixBlendMode: "overlay" }}
                   />
                 </motion.button>
               </Link>
 
               {posts.length > 0 && (
-                <Link href="/we-are-hiring">
-                  <motion.button
-                    className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-600 to-orange-600 rounded-lg overflow-hidden"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="relative z-10 text-base sm:text-lg font-medium flex items-center justify-center gap-2">
+                <motion.button
+                  className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-pink-600 to-orange-600 px-6 py-3 sm:px-8 sm:py-4"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href="/we-are-hiring">
+                    <span className="relative z-10 flex items-center justify-center gap-2 text-base font-medium sm:text-lg">
                       We&apos;re Hiring
-                      <BriefcaseIcon className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                      <span className="flex items-center justify-center w-5 h-5 text-xs font-bold bg-white text-pink-600 rounded-full ml-1">
+                      <BriefcaseIcon className="h-4 w-4 transition-transform group-hover:rotate-12" />
+                      <span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs font-bold text-pink-600">
                         {posts.length}
                       </span>
                     </span>
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                      className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 opacity-0 transition-opacity group-hover:opacity-100"
                       style={{ mixBlendMode: "overlay" }}
                     />
-                  </motion.button>
-                </Link>
+                  </Link>
+                </motion.button>
               )}
             </div>
           </div>
@@ -135,27 +135,27 @@ export default function HeroSection() {
                   index === activeIndex && (
                     <motion.div
                       key={activity.title}
-                      className="absolute inset-0 bg-black/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8"
+                      className="absolute inset-0 rounded-2xl bg-black/50 p-6 backdrop-blur-sm sm:p-8"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -50 }}
                       transition={{ duration: 0.5 }}
                     >
                       <div
-                        className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${activity.color}`}
+                        className={`inline-flex rounded-xl bg-gradient-to-br p-4 ${activity.color}`}
                       >
-                        <activity.icon className="w-8 h-8 text-white" />
+                        <activity.icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl font-bold mt-4">
+                      <h3 className="mt-4 text-xl font-bold sm:text-2xl">
                         {activity.title}
                       </h3>
-                      <p className="text-gray-400 mt-2 text-sm sm:text-base">
+                      <p className="mt-2 text-sm text-gray-400 sm:text-base">
                         {activity.description}
                       </p>
 
                       <div className="mt-6 flex items-center gap-2">
-                        <div className="px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm">
+                        <div className="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300">
                           {activity.stats}
                         </div>
                       </div>
@@ -164,7 +164,7 @@ export default function HeroSection() {
                         {index + 1}/{activities.length}
                       </div>
                     </motion.div>
-                  )
+                  ),
               )}
             </AnimatePresence>
 
@@ -172,12 +172,11 @@ export default function HeroSection() {
               {activities.map((_, index) => (
                 <motion.button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-colors duration-300 
-                    ${
-                      index === activeIndex
-                        ? "bg-white"
-                        : "bg-gray-600 hover:bg-gray-500"
-                    }`}
+                  className={`h-2 w-2 rounded-full transition-colors duration-300 ${
+                    index === activeIndex
+                      ? "bg-white"
+                      : "bg-gray-600 hover:bg-gray-500"
+                  }`}
                   onClick={() => setActiveIndex(index)}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}

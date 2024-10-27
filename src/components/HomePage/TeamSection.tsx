@@ -8,48 +8,48 @@ import {
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-16 bg-[#1E1144]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+    <section id="team" className="bg-[#1E1144] py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h2 className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
             Meet Our Team
           </h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             The brilliant minds behind Deviators Club pushing the boundaries of
             what&apos;s possible
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20"
+              className="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:transform hover:shadow-xl hover:shadow-purple-500/20"
             >
               <div className="flex flex-col items-center">
-                <div className="relative w-32 h-32 mb-4">
+                <div className="relative mb-4 h-32 w-32">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    className="rounded-full object-cover border-2 border-purple-500"
+                    className="rounded-full border-2 border-purple-500 object-cover"
                     fill
                     sizes="(max-width: 128px) 100vw, 128px"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   {member.name}
                 </h3>
-                <div className="flex flex-wrap justify-center gap-2 mb-4">
+                <div className="mb-4 flex flex-wrap justify-center gap-2">
                   {member.roles.map((role, roleIndex) => (
                     <span
                       key={roleIndex}
-                      className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full"
+                      className="rounded-full bg-purple-500/20 px-3 py-1 text-sm text-purple-300"
                     >
                       {role}
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-400 text-center mb-4 text-sm">
+                <p className="mb-4 text-center text-sm text-gray-400">
                   {member.intro}
                 </p>
                 <div className="flex space-x-4">
@@ -59,11 +59,11 @@ export default function TeamSection() {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 transition-colors hover:text-white"
                     >
                       {key === "github" && (
                         <svg
-                          className="w-5 h-5"
+                          className="h-5 w-5"
                           viewBox="0 0 24 24"
                           fill="currentColor"
                         >
@@ -72,7 +72,7 @@ export default function TeamSection() {
                       )}
                       {key === "linkedin" && (
                         <svg
-                          className="w-5 h-5"
+                          className="h-5 w-5"
                           viewBox="0 0 24 24"
                           fill="currentColor"
                         >
@@ -80,10 +80,10 @@ export default function TeamSection() {
                         </svg>
                       )}
                       {key === "twitter" && (
-                        <ChatBubbleBottomCenterTextIcon className="w-5 h-5" />
+                        <ChatBubbleBottomCenterTextIcon className="h-5 w-5" />
                       )}
                       {key === "portfolio" && (
-                        <GlobeAltIcon className="w-5 h-5" />
+                        <GlobeAltIcon className="h-5 w-5" />
                       )}
                     </Link>
                   ))}
