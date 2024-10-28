@@ -7,6 +7,8 @@ import Image4 from "@/assets/events/debugDecrypt/4.jpeg";
 import Image5 from "@/assets/events/debugDecrypt/5.jpeg";
 import Image6 from "@/assets/events/debugDecrypt/6.jpeg";
 import Image7 from "@/assets/events/debugDecrypt/7.jpeg";
+import Image8 from "@/assets/events/debugDecrypt/8.png";
+import Image9 from "@/assets/events/debugDecrypt/9.png";
 
 export const DebugDecrypt: Omit<EVENT, "slug"> = {
   title: "Debug Decrypt",
@@ -18,6 +20,16 @@ Stay tuned for more such events and participate as much as u can cause you know 
 NOBODY IS PERFECT`,
   // 13 august 2024
   date: new Date("2024-08-13T18:25:00.000Z"),
-  images: [Image1, Image2, Image3, Image4, Image5, Image6, Image7],
+  images: [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+  ],
   index: 6,
 };

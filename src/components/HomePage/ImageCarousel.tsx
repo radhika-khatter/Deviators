@@ -65,7 +65,7 @@ function TouchableControls({
 }) {
   return (
     <>
-      <div className="absolute inset-0 z-10 flex items-center justify-between p-2 sm:p-4">
+      <div className="absolute inset-0 z-10 flex cursor-none items-center justify-between p-2 sm:p-4">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -179,7 +179,7 @@ function NonTouchableCarousel({
             opacity: { duration: 0.4 },
             scale: { duration: 0.4 },
           }}
-          className="absolute h-full w-full object-cover"
+          className="absolute h-full w-full overflow-hidden rounded-xl object-cover"
           alt={`Slide ${slideIndex + 1}`}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}

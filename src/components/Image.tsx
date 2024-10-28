@@ -29,8 +29,8 @@ export function ImageCx({ image }: { image: StaticImageData }) {
     <ItemPSG
       original={image.src}
       thumbnail={image.src}
-      width="1024"
-      height="768"
+      width={image.width}
+      height={image.height}
     >
       {({ ref, open }) => (
         <Image
