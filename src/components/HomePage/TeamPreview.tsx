@@ -44,26 +44,30 @@ export default function TeamPreview() {
 
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center sm:gap-8">
             <div className="xs:-space-x-6 flex flex-wrap -space-x-4 sm:flex-nowrap sm:-space-x-8">
-              {team.slice(0, visibleMembers).map((member, index) => (
-                <div
-                  key={index}
-                  className="xs:h-20 xs:w-20 relative h-16 w-16 transition-all duration-300 hover:z-10 hover:scale-110 sm:h-24 sm:w-24"
-                  style={{ zIndex: team.length - index }}
-                >
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    className="sm:border-3 rounded-full border-2 border-purple-500 object-cover shadow-lg ring-2 ring-[#1E1144] sm:ring-4"
-                    fill
-                    sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
-                  />
-                  <div className="xs:block absolute -bottom-1 left-1/2 hidden -translate-x-1/2">
-                    <span className="xs:px-2 xs:py-1 xs:text-xs whitespace-nowrap rounded-full bg-purple-500/90 px-1.5 py-0.5 text-[10px] font-medium text-white">
-                      {member.roles[0]}
-                    </span>
+              {team
+                .sort(() => Math.random() - 0.5)
+                .slice(0, visibleMembers)
+                .map((member, index) => (
+                  <div
+                    key={index}
+                    className="xs:h-20 xs:w-20 relative h-16 w-16 transition-all duration-300 hover:z-10 hover:scale-110 sm:h-24 sm:w-24"
+                    style={{ zIndex: team.length - index }}
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      title={member.name}
+                      className="sm:border-3 rounded-full border-2 border-purple-500 object-cover shadow-lg ring-2 ring-[#1E1144] sm:ring-4"
+                      fill
+                      sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
+                    />
+                    <div className="xs:block absolute -bottom-1 left-1/2 hidden -translate-x-1/2">
+                      <span className="xs:px-2 xs:py-1 xs:text-xs whitespace-nowrap rounded-full bg-purple-500/90 px-1.5 py-0.5 text-[10px] font-medium text-white">
+                        {member.roles[0]}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
               {totalMembers > visibleMembers && (
                 <div
                   className="xs:h-20 xs:w-20 sm:border-3 xs:text-xl relative flex h-16 w-16 items-center justify-center rounded-full border-2 border-purple-500 bg-purple-500/20 text-base font-bold text-purple-300 shadow-lg transition-all duration-300 hover:scale-110 sm:h-24 sm:w-24"
