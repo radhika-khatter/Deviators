@@ -173,6 +173,8 @@ export default function HeroSection() {
             <div className="absolute bottom-4 left-4 flex gap-2">
               {activities.map((_, index) => (
                 <motion.button
+                  name="activity"
+                  title="Activity"
                   key={index}
                   className={`h-2 w-2 rounded-full transition-colors duration-300 ${
                     index === activeIndex
