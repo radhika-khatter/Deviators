@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
@@ -57,11 +56,13 @@ function TouchableControls({
   images,
   setPage,
   slideIndex,
+  resetTimeout,
 }: {
   paginate: (newDirection: number) => void;
   images: StaticImageData[];
   setPage: React.Dispatch<React.SetStateAction<[number, number]>>;
   slideIndex: number;
+  resetTimeout: () => void;
 }) {
   return (
     <>
@@ -69,7 +70,10 @@ function TouchableControls({
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => paginate(-1)}
+          onClick={() => {
+            resetTimeout();
+            paginate(-1);
+          }}
           className="rounded-full bg-black/70 p-2 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-black/90 sm:p-3"
         >
           <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
@@ -77,7 +81,10 @@ function TouchableControls({
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => paginate(1)}
+          onClick={() => {
+            resetTimeout();
+            paginate(1);
+          }}
           className="rounded-full bg-black/70 p-2 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-black/90 sm:p-3"
         >
           <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
@@ -89,7 +96,10 @@ function TouchableControls({
             key={index}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
-            onClick={() => setPage([index, index > slideIndex ? 1 : -1])}
+            onClick={() => {
+              resetTimeout();
+              setPage([index, index > slideIndex ? 1 : -1]);
+            }}
             className={`h-2 w-2 rounded-full shadow-lg transition-colors sm:h-3 sm:w-3 ${
               index === slideIndex ? "bg-white" : "bg-white/50"
             }`}
@@ -107,12 +117,16 @@ function NonTouchableCarousel({
   direction,
   paginate,
   slideIndex,
+  resetTimeout,
+  stopInterval,
 }: {
   images: StaticImageData[];
   page: number;
   direction: number;
   paginate: (newDirection: number) => void;
   slideIndex: number;
+  resetTimeout: () => void;
+  stopInterval: () => void;
 }) {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
@@ -134,7 +148,7 @@ function NonTouchableCarousel({
   );
 
   const handleDragEnd = (
-    event: MouseEvent | TouchEvent | PointerEvent,
+    _: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo,
   ) => {
     const swipe = swipePower(info.offset.x, info.velocity.x);
@@ -151,8 +165,15 @@ function NonTouchableCarousel({
       className="relative h-full w-full"
       onMouseMove={handleMouseMove}
       style={{ cursor: "none" }}
-      onMouseEnter={() => setShowCustomMouse(true)}
-      onMouseLeave={() => setShowCustomMouse(false)}
+      onMouseEnter={() => {
+        setShowCustomMouse(true);
+        stopInterval();
+      }}
+      onMouseLeave={() => {
+        setShowCustomMouse(false);
+        resetTimeout();
+      }}
+      onClick={() => resetTimeout()}
     >
       {showCustomMouse && (
         <motion.div
@@ -197,6 +218,7 @@ function NonTouchableCarousel({
 export default function ImageCarousel({ images }: CarouselProps) {
   const [isTouchableDevice, setIsTouchableDevice] = useState(false);
   const [[page, direction], setPage] = useState([0, 0]);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const slideIndex = Math.abs(page % images.length);
 
@@ -218,6 +240,33 @@ export default function ImageCarousel({ images }: CarouselProps) {
     window.addEventListener("resize", checkIsTouchableDevice);
     return () => window.removeEventListener("resize", checkIsTouchableDevice);
   }, [checkIsTouchableDevice]);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      paginate(1);
+    }, 3000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [paginate]);
+
+  const resetTimeout = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      paginate(1);
+    }, 3000);
+  }, [paginate]);
+
+  const stopInterval = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+  }, []);
 
   return (
     <div className="w-full bg-[#1E1144] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
@@ -274,6 +323,7 @@ export default function ImageCarousel({ images }: CarouselProps) {
               images={images}
               setPage={setPage}
               slideIndex={slideIndex}
+              resetTimeout={resetTimeout}
             />
           </>
         ) : (
@@ -283,6 +333,8 @@ export default function ImageCarousel({ images }: CarouselProps) {
             direction={direction}
             paginate={paginate}
             slideIndex={slideIndex}
+            resetTimeout={resetTimeout}
+            stopInterval={stopInterval}
           />
         )}
       </div>
