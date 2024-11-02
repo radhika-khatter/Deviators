@@ -15,6 +15,7 @@ import Divyansh from "@/assets/team/divyansh.webp";
 import Saurabh from "@/assets/team/saurabh.webp";
 import Yash from "@/assets/team/yash.webp";
 import Bhavya from "@/assets/team/bhavya.webp";
+import Aditya from "@/assets/team/aditya.webp";
 import { StaticImageData } from "next/image";
 
 const team: {
@@ -208,6 +209,16 @@ const team: {
       linkedin: "https://www.linkedin.com/in/katariabhavya",
     },
     image: Bhavya,
+  },
+  {
+    name: "Aditya Yadav",
+    roles: ["Editor"],
+    image: Aditya,
+    intro: "Can edit everything except your sessional scorecard",
+    urls: {
+      github: "https://github.com/ADIXD0001",
+      linkedin: "https://www.linkedin.com/in/aditya-yadav-098850289",
+    },
   },
 ];
 
