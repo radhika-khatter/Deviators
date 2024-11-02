@@ -24,6 +24,9 @@ export default function HeroSection() {
   const buttonBaseClass =
     "group relative overflow-hidden rounded-lg px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto min-w-[200px]";
 
+  const showHiringBtn =
+    posts.filter((post) => new Date() < new Date(post.expiresOn)).length > 0;
+
   return (
     <section
       id="home"
@@ -105,7 +108,7 @@ export default function HeroSection() {
                 </motion.button>
               </Link>
 
-              {posts.length > 0 && (
+              {showHiringBtn && (
                 <Link href="/we-are-hiring" className="w-full sm:w-auto">
                   <motion.button
                     className={`${buttonBaseClass} bg-gradient-to-r from-pink-600 to-orange-600`}

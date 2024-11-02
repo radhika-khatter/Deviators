@@ -91,7 +91,7 @@ const team: {
     intro: "Is a member of Dead Poets Society…until the alarm goes off.",
     urls: {
       github: "https://github.com/deepikaa0402",
-      linkedin: "www.linkedin.com/in/deepika-anand-4a371a26b",
+      linkedin: "https://www.linkedin.com/in/deepika-anand-4a371a26b",
     },
     image: Deepika,
   },
