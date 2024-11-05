@@ -6,7 +6,7 @@ import { Twitter } from "lucide-react";
 
 export default function TeamSection() {
   return (
-    <section id="team" className="bg-[#1E1144] py-16">
+    <section id="team" className="bg-[#1E1144] py-16 pt-20 lg:pt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">

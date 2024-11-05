@@ -23,7 +23,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-black px-4 py-12 text-white sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black px-4 py-12 pt-20 text-white sm:px-6 lg:px-8 lg:pt-24">
       <div className="mx-auto max-w-7xl">
         <Link
           href="/gallery"

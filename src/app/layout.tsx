@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Navbar from "@/components/ui/floating-navbar";
 import { metaDataBase } from "@/data/metaData";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   ...metaDataBase,

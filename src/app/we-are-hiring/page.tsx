@@ -83,7 +83,7 @@ export default function Page() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0F0F1A] via-[#1A1A2E] to-[#2A1A3A] text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F0F1A] via-[#1A1A2E] to-[#2A1A3A] pt-20 text-white lg:pt-24">
       <div className="container mx-auto px-4 py-16">
         <div className="mb-16 text-center">
           <h1 className="mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-5xl font-bold text-transparent">

@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black text-white"
+      className="relative flex min-h-screen items-center overflow-hidden bg-black pt-10 text-white"
     >
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
