@@ -21,7 +21,7 @@ const socials = [
   },
   {
     name: "Linktree",
-    url: "https://linktr.ee/deviatorsclub",
+    url: "https://linktree.deviatorsdce.tech",
   },
 ];
 
