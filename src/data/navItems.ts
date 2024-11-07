@@ -1,4 +1,4 @@
-import { GalleryVerticalIcon } from "lucide-react";
+import { BookIcon, GalleryVerticalIcon } from "lucide-react";
 import {
   EnvelopeIcon,
   HomeIcon,
@@ -21,6 +21,11 @@ const navItems = [
     name: "Team",
     link: "/team",
     icon: UsersIcon,
+  },
+  {
+    name: "learn",
+    link: "/learn",
+    icon: BookIcon,
   },
   {
     name: "Gallery",
