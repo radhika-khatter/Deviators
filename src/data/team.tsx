@@ -43,7 +43,7 @@ const team: {
   },
   {
     name: "Vivek Chahal",
-    roles: ["Co-lead", "AI team"],
+    roles: ["Co-lead", "IOS lead"],
     intro: "Interested in technology which no one uses.",
     urls: {
       github: "https://github.com/Vivek09Chahal",
@@ -75,7 +75,7 @@ const team: {
     image: KK,
   },
   {
-    name: "Ayush Goyal",
+    name: "Ayush Goyal aka Chintu",
     roles: ["Event management Lead", "Team Coordinator", "Web Team"],
     intro: "Recruiter and intern at same company",
     image: Ayush,
