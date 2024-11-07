@@ -29,6 +29,7 @@ const team: {
     portfolio?: string;
   };
   image: StaticImageData;
+  keywords: string[];
 }[] = [
   {
     name: "Kanak Tanwar",
@@ -40,6 +41,7 @@ const team: {
       twitter: "https://x.com/kanaktwts",
     },
     image: kanak,
+    keywords: ["founder", "ai", "lead"],
   },
   {
     name: "Vivek Chahal",
@@ -51,6 +53,7 @@ const team: {
       twitter: "https://x.com/vivekchahal09",
     },
     image: Vivek,
+    keywords: ["ios", "founder", "lead", "ios"],
   },
   {
     name: "Pulkit",
@@ -63,6 +66,7 @@ const team: {
       portfolio: "https://www.devpulkit.in",
     },
     image: Pulkit,
+    keywords: ["chairperson", "founder", "lead", "web"],
   },
   {
     name: "Krishna Kartikay Bhatt",
@@ -73,6 +77,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/krishna-kartikay-bhatt/",
     },
     image: KK,
+    keywords: ["cyber", "lead", "founder", "event"],
   },
   {
     name: "Ayush Goyal",
@@ -84,6 +89,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/ayush-goyal-b4491324b",
       twitter: "https://x.com/Ayush282755",
     },
+    keywords: ["event", "lead", "founder", "web"],
   },
   {
     name: "Deepika Anand",
@@ -94,6 +100,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/deepika-anand-4a371a26b",
     },
     image: Deepika,
+    keywords: ["women", "lead", "event"],
   },
   {
     name: "Diksha Sharma",
@@ -105,6 +112,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/diksha-sharma-6b43a5213/",
     },
     image: Diksha,
+    keywords: ["ui", "women", "lead"],
   },
   {
     name: "Pooja Goel",
@@ -115,6 +123,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/pooja-goel-19a9b2241/",
     },
     image: Pooja,
+    keywords: ["web", "ui", "women"],
   },
   {
     name: "Manas Thakur",
@@ -126,6 +135,7 @@ const team: {
       twitter: "https://x.com/Menace_thakur",
     },
     image: Manas,
+    keywords: ["ai"],
   },
   {
     name: "Vidushi Anand",
@@ -137,6 +147,7 @@ const team: {
       twitter: "https://x.com/Vidushi_Anand_",
     },
     image: Vidushi,
+    keywords: ["ai", "women"],
   },
   {
     name: "Kunal Verma",
@@ -147,6 +158,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/kunal-verma-528431291",
     },
     image: Kunal,
+    keywords: ["social", "web"],
   },
   {
     name: "Tanmay Verma",
@@ -158,6 +170,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/tanmayverma190605",
     },
     image: Tanmay,
+    keywords: ["social", "web"],
   },
   {
     name: "Yash Kumar",
@@ -168,6 +181,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/yash-kumar-4a936426b/",
     },
     image: Yash,
+    keywords: ["dsa", "event"],
   },
   {
     name: "Saurabh Singh",
@@ -178,6 +192,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/sa1-1rabh",
     },
     image: Saurabh,
+    keywords: ["dsa"],
   },
   {
     name: "Dipti Chahar",
@@ -188,6 +203,7 @@ const team: {
       linkedin: " https://www.linkedin.com/in/dipti-chahar-948a26247/",
     },
     image: Dipti,
+    keywords: ["dsa", "women"],
   },
   {
     name: "Divyansh Sethi",
@@ -199,6 +215,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/divyansh-sethi-035b7b25b",
     },
     image: Divyansh,
+    keywords: ["dsa", "event"],
   },
   {
     name: "Bhavya Kataria",
@@ -209,6 +226,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/katariabhavya",
     },
     image: Bhavya,
+    keywords: ["social"],
   },
   {
     name: "Aditya Yadav",
@@ -219,7 +237,11 @@ const team: {
       github: "https://github.com/ADIXD0001",
       linkedin: "https://www.linkedin.com/in/aditya-yadav-098850289",
     },
+    keywords: ["editor"],
   },
 ];
 
-export default team;
+export default team.map((member) => ({
+  ...member,
+  keywords: [...member.keywords, "club"],
+}));

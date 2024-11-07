@@ -1,7 +1,8 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-import { Gallery, Item as ItemPSG } from "react-photoswipe-gallery";
+import { StaticImageData } from "next/image";
+import { Gallery } from "react-photoswipe-gallery";
+import ImageZoom from "./ImageZoom";
 
 export default function ImageGallery({
   images,
@@ -16,31 +17,13 @@ export default function ImageGallery({
             key={index}
             className="relative h-auto w-[97vw] overflow-hidden rounded-lg sm:h-[300px] sm:w-[300px] lg:h-[350px] lg:w-[350px] 2xl:h-[400px] 2xl:w-[400px]"
           >
-            <ImageCx image={image} />
+            <ImageZoom
+              src={image}
+              className="border-20 aspect-square h-full w-full scale-110 cursor-pointer object-cover transition-transform hover:scale-100"
+            />
           </div>
         ))}
       </div>
     </Gallery>
-  );
-}
-
-export function ImageCx({ image }: { image: StaticImageData }) {
-  return (
-    <ItemPSG
-      original={image.src}
-      thumbnail={image.src}
-      width={image.width}
-      height={image.height}
-    >
-      {({ ref, open }) => (
-        <Image
-          ref={ref}
-          onClick={open}
-          src={image}
-          alt="Image"
-          className="border-20 aspect-square h-full w-full scale-110 cursor-pointer object-cover transition-transform hover:scale-100"
-        />
-      )}
-    </ItemPSG>
   );
 }
