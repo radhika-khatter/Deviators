@@ -75,7 +75,7 @@ const team: {
     image: KK,
   },
   {
-    name: "Ayush Goyal aka Chintu",
+    name: "Ayush Goyal",
     roles: ["Event management Lead", "Team Coordinator", "Web Team"],
     intro: "Recruiter and intern at same company",
     image: Ayush,
