@@ -23,7 +23,7 @@ export default function CyberResources() {
 
   useEffect(() => {
     if (localStorage) {
-      setSelectedTab(localStorage.getItem("selectedTab") || "roadmap");
+      setSelectedTab(localStorage.getItem("cyberSelectedTab") || "roadmap");
     } else {
       setSelectedTab("roadmap");
     }
@@ -66,7 +66,7 @@ export default function CyberResources() {
           value={selectedTab}
           onValueChange={(e) => {
             setSelectedTab(e);
-            localStorage.setItem("selectedTab", e);
+            localStorage.setItem("cyberSelectedTab", e);
           }}
           className="space-y-8"
         >

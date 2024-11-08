@@ -23,7 +23,7 @@ const DsaResources = () => {
 
   useEffect(() => {
     if (localStorage) {
-      setSelectedTab(localStorage.getItem("selectedTab") || "roadmap");
+      setSelectedTab(localStorage.getItem("dsaSelectedTab") || "roadmap");
     } else {
       setSelectedTab("roadmap");
     }
@@ -65,7 +65,7 @@ const DsaResources = () => {
           value={selectedTab}
           onValueChange={(e) => {
             setSelectedTab(e);
-            localStorage.setItem("selectedTab", e);
+            localStorage.setItem("dsaSelectedTab", e);
           }}
           className="space-y-8"
         >

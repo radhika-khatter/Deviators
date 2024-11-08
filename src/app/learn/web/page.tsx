@@ -26,7 +26,7 @@ const WebDevResources = () => {
 
   useEffect(() => {
     if (localStorage) {
-      setSelectedTab(localStorage.getItem("selectedTab") || "roadmap");
+      setSelectedTab(localStorage.getItem("webSelectedTab") || "roadmap");
     } else {
       setSelectedTab("roadmap");
     }
@@ -67,7 +67,7 @@ const WebDevResources = () => {
           value={selectedTab}
           onValueChange={(e) => {
             setSelectedTab(e);
-            localStorage.setItem("selectedTab", e);
+            localStorage.setItem("webSelectedTab", e);
           }}
           className="space-y-8"
         >
