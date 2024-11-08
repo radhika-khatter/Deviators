@@ -13,13 +13,13 @@ import { Gallery } from "react-photoswipe-gallery";
 import ImageZoom from "@/components/ImageZoom";
 
 import Syllabus0to100 from "@/assets/resources/web/0-1 syllabus.png";
-import { roadmapData } from "@/data/resources/web";
+import { webDevRoadmapData } from "@/data/resources/web";
 
 export default function WebDevRoadmap() {
   return (
     <div className="space-y-8 p-4">
       <Accordion type="single" collapsible className="w-full">
-        {roadmapData.map((category, idx) => (
+        {webDevRoadmapData.map((category, idx) => (
           <AccordionItem key={idx} value={category.category}>
             <AccordionTrigger>
               <h2 className="text-lg font-semibold text-purple-200 md:text-xl">

@@ -1,5 +1,6 @@
 import webDevLogo from "@/assets/resources/web/logos/webdev-logo.svg";
 import swiftLogo from "@/assets/resources/ios/swift.png";
+import dsaLogo from "@/assets/resources/dsa/logo.png";
 
 export const tracks = [
   {
@@ -7,6 +8,12 @@ export const tracks = [
     url: "web",
     desc: "Build websites and web applications",
     image: webDevLogo,
+  },
+  {
+    name: "DSA",
+    url: "dsa",
+    desc: "Learn Data Structures and Algorithms",
+    image: dsaLogo,
   },
   {
     name: "iOS Development",

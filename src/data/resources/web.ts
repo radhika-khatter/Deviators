@@ -4,7 +4,7 @@ type Resource = {
   resources: { title: string; url: string }[];
 };
 
-export const roadmapData = [
+export const webDevRoadmapData = [
   {
     category: "Fundamentals",
     items: [

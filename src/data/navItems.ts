@@ -23,7 +23,7 @@ const navItems = [
     icon: UsersIcon,
   },
   {
-    name: "learn",
+    name: "Learn",
     link: "/learn",
     icon: BookIcon,
   },

@@ -33,7 +33,7 @@ const team: {
 }[] = [
   {
     name: "Kanak Tanwar",
-    roles: ["Club Lead", "AI lead"],
+    roles: ["Club Lead", "AI lead", "Dsa team"],
     intro: "Can code in any language (if chatgpt is accessible)",
     urls: {
       github: "https://github.com/kanakOS01",
@@ -41,7 +41,7 @@ const team: {
       twitter: "https://x.com/kanaktwts",
     },
     image: kanak,
-    keywords: ["founder", "ai", "lead"],
+    keywords: ["founder", "ai", "lead", "dsa"],
   },
   {
     name: "Vivek Chahal",
@@ -162,7 +162,7 @@ const team: {
   },
   {
     name: "Tanmay Verma",
-    roles: ["Social Media", "Web Team"],
+    roles: ["Social Media", "Cyber Security Team", "Blockchain Team"],
     intro:
       "I'm like a bug in the matrix, but instead of being fixed, I add more bugs (and caffeine)!",
     urls: {
@@ -170,7 +170,7 @@ const team: {
       linkedin: "https://www.linkedin.com/in/tanmayverma190605",
     },
     image: Tanmay,
-    keywords: ["social", "web"],
+    keywords: ["social", "cyber", "blockchain"],
   },
   {
     name: "Yash Kumar",
