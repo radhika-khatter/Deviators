@@ -135,7 +135,7 @@ export default function IosLearnPage() {
           className="mt-8 text-center text-sm text-gray-400"
         >
           <p className="mb-4 text-lg text-gray-300">
-          For further assistance, contact the Deviators iOS team.
+            For further assistance, contact the Deviators iOS team.
           </p>
           <DisplayTeam keyword="ios" />
         </motion.div>

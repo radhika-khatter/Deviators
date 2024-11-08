@@ -14,11 +14,11 @@ import { FileCode } from "lucide-react";
 
 import "photoswipe/dist/photoswipe.css";
 
-import DsaRoadmap from "./_components/DsaRoadmap";
+import CyberRoadmap from "./_components/CyberRoadmap";
 import DisplayTeam from "@/components/DisplayTeam";
-import DsaOnlineResources from "./_components/DsaOnlineResources";
+import DsaOnlineResources from "./_components/CyberResources";
 
-const DsaResources = () => {
+export default function CyberResources() {
   const [selectedTab, setSelectedTab] = useState("");
 
   useEffect(() => {
@@ -49,15 +49,16 @@ const DsaResources = () => {
           className="mb-12 space-y-4 text-balance"
         >
           <h1 className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-6xl lg:text-7xl">
-            Data Structures and Algorithms Resources
+            Cyber Security Resources
           </h1>
           <p className="mx-auto max-w-2xl text-center text-lg text-gray-300">
-            Learn the basics of data structures and algorithms, and find
-            resources to help you practice and improve your problem-solving
+            A collection of resources to help you learn and practice Cyber
+            Security.
           </p>
           <p className="text-md mx-auto max-w-2xl text-center text-gray-400">
-            Note: Data Structures and Algorithms are essential for technical
-            interviews and coding challenges.
+            <strong>Disclaimer:</strong> The resources provided here are for
+            educational purposes only. We do not endorse any illegal activities
+            or hacking
           </p>
         </motion.div>
 
@@ -117,12 +118,12 @@ const DsaResources = () => {
           <p className="mb-4 text-lg text-gray-300">
             For further assistance, contact the Deviators web dev team:
           </p>
-          <DisplayTeam keyword="dsa" />
+          <DisplayTeam keyword="cyber" />
         </motion.div>
       </div>
     </div>
   );
-};
+}
 
 const tabs = [
   {
@@ -131,7 +132,7 @@ const tabs = [
     title: "Data Structures and Algorithms Roadmap",
     description:
       "A comprehensive roadmap to master Data Structures and Algorithms.",
-    content: DsaRoadmap,
+    content: CyberRoadmap,
     icon: FileCode,
   },
   {
@@ -144,5 +145,3 @@ const tabs = [
     icon: FileCode,
   },
 ];
-
-export default DsaResources;

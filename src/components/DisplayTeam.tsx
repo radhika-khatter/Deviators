@@ -20,7 +20,7 @@ export default function DisplayTeam({ keyword }: { keyword: string }) {
             href={member.urls.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="block transform transition-all duration-300 hover:scale-105"
+            className="flex max-w-32 transform flex-col items-center justify-center text-balance transition-all duration-300 hover:scale-105"
           >
             <Image
               src={member.image}

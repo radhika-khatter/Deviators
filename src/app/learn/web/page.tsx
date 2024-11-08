@@ -27,6 +27,8 @@ const WebDevResources = () => {
   useEffect(() => {
     if (localStorage) {
       setSelectedTab(localStorage.getItem("selectedTab") || "roadmap");
+    } else {
+      setSelectedTab("roadmap");
     }
   }, []);
 
