@@ -19,10 +19,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 import { iosResources } from "@/data/resources/ios";
+import DisplayTeam from "@/components/DisplayTeam";
 
 export default function IosLearnPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
+  const fadeInUpVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
   const handleAccordionClick = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
@@ -123,6 +127,17 @@ export default function IosLearnPage() {
               </CardContent>
             </Card>
           ))}
+        </motion.div>
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="mt-8 text-center text-sm text-gray-400"
+        >
+          <p className="mb-4 text-lg text-gray-300">
+          For further assistance, contact the Deviators iOS team.
+          </p>
+          <DisplayTeam keyword="ios" />
         </motion.div>
       </div>
     </div>
