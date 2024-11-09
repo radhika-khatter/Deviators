@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import aboutItems from "@/data/about";
+import aboutItems, { aboutClub } from "@/data/about";
 
 export default function AboutSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -48,14 +48,7 @@ export default function AboutSection() {
           className="mb-8 max-w-3xl px-4 text-center sm:mb-16"
         >
           <p className="text-base leading-relaxed text-gray-300 sm:text-lg">
-            Welcome to DEVIATORS… The coolest tech haven on the campus! We are a
-            group of tech enthusiasts diving deep into the world of technology
-            and having a blast while doing it. Whether you&apos;re a newbie or a
-            seasoned coder, we provide a playground for all, where innovation
-            thrives, ideas are shared and everybody debates on &quot;It&apos;s a
-            feature not a Bug&quot;. Join us, explore, innovate, while making
-            memories and let&apos;s push the boundaries of what&apos;s possible
-            together!
+            {aboutClub}
           </p>
         </motion.div>
 

@@ -6,7 +6,6 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   TrophyIcon,
   FireIcon,
-  ArrowUturnRightIcon,
 } from "@heroicons/react/24/outline";
 export const activities = [
   {
@@ -19,50 +18,48 @@ export const activities = [
   {
     icon: BeakerIcon,
     title: "Hackathons",
-    description: "Join, compete, and host top-tier coding challenges.",
+    description:
+      "Jump into the action with real-world challenges! Our hackathons are where creativity and coding collide. Build solutions with friends, get feedback from mentors, and learn at a breakneck speed. Ready to make your mark?",
     color: "from-blue-500 to-cyan-500",
     stats: "24+ Events/Year",
   },
   {
     icon: LightBulbIcon,
     title: "Workshops",
-    description: "Engage in interactive learning, every week.",
+    description:
+      "Join our weekly interactive workshops, where learning meets hands-on experience. Dive deep into real-world topics, collaborate, and sharpen your skills!",
     color: "from-cyan-500 to-teal-500",
     stats: "Weekly Sessions",
   },
   {
-    icon: UsersIcon,
-    title: "Community",
-    description: "Connect, collaborate, and grow with tech enthusiasts.",
-    color: "from-teal-500 to-green-500",
-    stats: "500+ Members",
-  },
-  {
     icon: ChatBubbleOvalLeftEllipsisIcon,
     title: "Community Talks",
-    description: "Active conversations around tech and innovation.",
+    description:
+      "Engage in lively discussions on tech trends and innovations. Share ideas, learn from peers, and stay ahead of the curve!",
     color: "from-gray-500 to-purple-500",
     stats: "Bi-weekly Discussions",
   },
   {
-    icon: ArrowUturnRightIcon,
-    title: "DSA Mastery",
+    title: "Community",
+    icon: UsersIcon,
     description:
-      "Unlock the mysteries of Data Structures and Algorithms with our comprehensive sessions.",
-    color: "from-gray-500 to-green-500",
-    stats: "1000+ Problems Solved",
+      "Join a dynamic network of tech enthusiasts, collaborate on projects, and grow together—because great things happen when minds connect",
+    color: "from-teal-500 to-green-500",
+    stats: "500+ Members",
   },
   {
     icon: TrophyIcon,
     title: "Achievements",
-    description: "Celebrate milestones, from contests to contributions.",
+    description:
+      "From winning hackathons to launching open-source projects, we celebrate every win! Our achievements reflect our passion, hard work, and the milestones that make us proud as a community.",
     color: "from-yellow-500 to-orange-500",
     stats: "100+ Wins",
   },
   {
     icon: FireIcon,
     title: "One Year Strong",
-    description: "Fired up and growing since Day 1.",
+    description:
+      "One year, countless ideas! We've built, innovated, and grown together, celebrating every moment. Here's to even more tech magic and memories with a community that's here to stay!",
     color: "from-red-500 to-pink-500",
     stats: "1 Year and Counting",
   },

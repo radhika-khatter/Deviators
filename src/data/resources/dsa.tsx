@@ -114,7 +114,7 @@ export const dsaResources = [
   },
   {
     title: "Competitive Programmer's Handbook",
-    url: "/Competitive_Programmer’s_Handbook.pdf",
+    url: "/Competitive_Programmer's_Handbook.pdf",
   },
   {
     title: "Kunal Kushwaha (Java)",

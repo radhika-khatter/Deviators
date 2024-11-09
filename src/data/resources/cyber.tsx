@@ -143,7 +143,7 @@ export const cyberRoadmapData: {
           "incident response frameworks",
         ],
         resources: [
-          "AlienVault’s Open Threat Exchange",
+          "AlienVault's Open Threat Exchange",
           "MITRE ATT&CK Framework",
         ],
       },

@@ -31,5 +31,5 @@ NOBODY IS PERFECT`,
     Image8,
     Image9,
   ],
-  index: 6,
+  index: 5,
 };
