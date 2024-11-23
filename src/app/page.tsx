@@ -4,8 +4,13 @@ import TeamPreviewSection from "@/components/HomePage/TeamPreview";
 import events from "@/data/event";
 import ImageCarousel from "@/components/HomePage/ImageCarousel";
 
+import GroupPicture from "@/assets/group_pic.png";
+
 export default function Home() {
-  const images = events.map((event) => event.images[event.index]);
+  const images = [
+    GroupPicture,
+    ...events.map((event) => event.images[event.index]),
+  ];
   return (
     <>
       <main>
