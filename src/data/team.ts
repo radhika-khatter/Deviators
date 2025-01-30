@@ -85,9 +85,9 @@ const team: {
     intro: "Recruiter and intern at same company",
     image: Ayush,
     urls: {
-      github: "https://github.com/AayushhGoyal",
+      github: "https://github.com/agayushh",
       linkedin: "https://www.linkedin.com/in/ayush-goyal-b4491324b",
-      twitter: "https://x.com/Ayush282755",
+      twitter: "http://x.com/agayushh",
     },
     keywords: ["event", "lead", "founder", "web"],
   },
