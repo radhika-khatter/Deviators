@@ -5,7 +5,6 @@ import KK from "@/assets/team/kk.webp";
 import Ayush from "@/assets/team/ayush.webp";
 import Deepika from "@/assets/team/deepika.webp";
 import Diksha from "@/assets/team/diksha.webp";
-import Manas from "@/assets/team/manas.webp";
 import Vidushi from "@/assets/team/vidushi.webp";
 import Kunal from "@/assets/team/kunal.webp";
 import Tanmay from "@/assets/team/tanmay.webp";
@@ -124,18 +123,6 @@ const team: {
     },
     image: Pooja,
     keywords: ["web", "ui", "women"],
-  },
-  {
-    name: "Manas Thakur",
-    roles: ["AI team"],
-    intro: "Prefers work over sleep and sleep over coffee.",
-    urls: {
-      github: "https://github.com/Manas-thakur",
-      linkedin: "https://www.linkedin.com/in/manasthakur30/",
-      twitter: "https://x.com/Menace_thakur",
-    },
-    image: Manas,
-    keywords: ["ai"],
   },
   {
     name: "Vidushi Anand",
