@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { activities } from "@/data/heroSection";
 import { ArrowRightIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import socials from "@/data/socials";
 import posts from "@/data/posts";
 
 export default function HeroSection() {
@@ -87,9 +86,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
-                href={
-                  socials.find((social) => social.name === "Discord")?.url ?? ""
-                }
+                href={"https://devolympus.deviatorsdce.tech"}
                 className="w-full sm:w-auto"
               >
                 <motion.button
@@ -98,7 +95,7 @@ export default function HeroSection() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2 text-base font-medium sm:text-lg">
-                    Join the Rebellion
+                    Check our hackathon
                     <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                   <motion.div

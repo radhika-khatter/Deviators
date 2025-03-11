@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import deviatorsLogoMin from "@/assets/logo/min-bg.png";
+import deviatorsLogoMin from "@/assets/logo/sm.svg";
 import navItems from "@/data/navItems";
 
 export default function Navigation() {
@@ -35,7 +35,7 @@ export default function Navigation() {
               <Image
                 src={deviatorsLogoMin}
                 alt="Deviators Logo"
-                className="h-8 w-auto md:h-10"
+                className="h-6 w-auto md:h-7"
               />
             </Link>
           </div>
