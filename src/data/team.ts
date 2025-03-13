@@ -206,7 +206,7 @@ const team: {
   },
   {
     name: "Bhavya Kataria",
-    roles: ["Social Media"],
+    roles: ["Social Media", "Designer", "Editor"],
     intro: "Not on tinder, but you can find me on discord",
     urls: {
       github: "https://www.github.com/damnbhavya",
