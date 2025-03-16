@@ -6,6 +6,7 @@ import Ayush from "@/assets/team/ayush.webp";
 import Deepika from "@/assets/team/deepika.webp";
 import Diksha from "@/assets/team/diksha.webp";
 import Vidushi from "@/assets/team/vidushi.webp";
+import Manas from "@/assets/team/manas.webp";
 import Kunal from "@/assets/team/kunal.webp";
 import Tanmay from "@/assets/team/tanmay.webp";
 import Pooja from "@/assets/team/pooja.webp";
@@ -15,6 +16,7 @@ import Saurabh from "@/assets/team/saurabh.webp";
 import Yash from "@/assets/team/yash.webp";
 import Bhavya from "@/assets/team/bhavya.webp";
 import Aditya from "@/assets/team/aditya.webp";
+
 import { StaticImageData } from "next/image";
 
 const team: {
@@ -135,6 +137,18 @@ const team: {
     },
     image: Vidushi,
     keywords: ["ai", "women"],
+  },
+  {
+    name: "Manas Thakur",
+    roles: ["AI team"],
+    intro: "Prefer work over sleep and sleep over coffee",
+    urls: {
+      github: "https://github.com/Manas-thakur",
+      linkedin: "https://www.linkedin.com/in/manasthakur30/",
+      twitter: "https://x.com/Menace_thakur",
+    },
+    image: Manas,
+    keywords: ["ai"],
   },
   {
     name: "Kunal Verma",
