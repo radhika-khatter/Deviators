@@ -64,7 +64,7 @@ const team: {
       github: "https://github.com/pulkitxm",
       linkedin: "https://www.linkedin.com/in/pulkit-dce",
       twitter: "https://x.com/devpulkitt",
-      portfolio: "https://www.devpulkit.in",
+      portfolio: "https://pulkitxm.com",
     },
     image: Pulkit,
     keywords: ["chairperson", "founder", "lead", "web"],
