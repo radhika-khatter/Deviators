@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import team from "@/data/team";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
@@ -26,12 +25,10 @@ export default function TeamSection() {
             >
               <div className="flex flex-col items-center">
                 <div className="relative mb-4 h-32 w-32">
-                  <Image
-                    src={member.image}
+                  <img
+                    src={member.image.src}
                     alt={member.name}
-                    className="rounded-full border-2 border-purple-500 object-cover"
-                    fill
-                    sizes="(max-width: 128px) 100vw, 128px"
+                    className="size-full rounded-full border-2 border-purple-500 object-cover"
                   />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold text-white">

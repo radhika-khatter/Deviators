@@ -12,7 +12,6 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { tracks } from "@/data/resources";
-import Image from "next/image";
 
 export default function LearnPage() {
   const fadeInVariants = {
@@ -67,11 +66,10 @@ export default function LearnPage() {
                 <CardHeader className="p-6">
                   <div className="flex items-center gap-4">
                     <div className="relative h-12 w-12 rounded-lg bg-gray-800/50 p-2 transition-transform duration-300 hover:scale-110">
-                      <Image
-                        src={track.image}
+                      <img
+                        src={track.image.src}
                         alt={`${track.name} icon`}
-                        fill
-                        className="object-contain p-1"
+                        className="h-full w-full object-contain p-1"
                       />
                     </div>
                     <CardTitle className="text-2xl font-bold text-white">

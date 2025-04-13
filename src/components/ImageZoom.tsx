@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { Item as ItemPSG } from "react-photoswipe-gallery";
 
 export default function ImageZoom({
@@ -22,10 +22,10 @@ export default function ImageZoom({
       height={src.height}
     >
       {({ ref, open }) => (
-        <Image
+        <img
           ref={ref}
           onClick={open}
-          src={src}
+          src={src.src}
           width={width}
           height={height}
           alt={alt ?? "Image"}

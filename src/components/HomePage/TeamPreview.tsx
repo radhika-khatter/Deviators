@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import team from "@/data/team";
 import { useEffect, useState } from "react";
@@ -53,13 +52,11 @@ export default function TeamPreview() {
                     className="xs:h-20 xs:w-20 relative h-16 w-16 transition-all duration-300 hover:z-10 hover:scale-110 sm:h-24 sm:w-24"
                     style={{ zIndex: team.length - index }}
                   >
-                    <Image
-                      src={member.image}
+                    <img
+                      src={member.image.src}
                       alt={member.name}
                       title={member.name}
-                      className="sm:border-3 rounded-full border-2 border-purple-500 object-cover shadow-lg ring-2 ring-[#1E1144] sm:ring-4"
-                      fill
-                      sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
+                      className="sm:border-3 size-full rounded-full border-2 border-purple-500 object-cover shadow-lg ring-2 ring-[#1E1144] sm:ring-4"
                     />
                     <div className="xs:block absolute -bottom-1 left-1/2 hidden -translate-x-1/2">
                       <span className="xs:px-2 xs:py-1 xs:text-xs whitespace-nowrap rounded-full bg-purple-500/90 px-1.5 py-0.5 text-[10px] font-medium text-white">

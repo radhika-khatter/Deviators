@@ -1,7 +1,6 @@
 import { getTeam } from "@/lib/team";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function DisplayTeam({ keyword }: { keyword: string }) {
   const teamMembers = getTeam({ keyword });
@@ -22,8 +21,8 @@ export default function DisplayTeam({ keyword }: { keyword: string }) {
             rel="noopener noreferrer"
             className="flex max-w-32 transform flex-col items-center justify-center text-balance transition-all duration-300 hover:scale-105"
           >
-            <Image
-              src={member.image}
+            <img
+              src={member.image.src}
               alt={member.name}
               className="h-20 w-20 rounded-full object-cover transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/50"
             />

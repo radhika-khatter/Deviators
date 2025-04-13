@@ -2,8 +2,14 @@ import webDevLogo from "@/assets/resources/web/logos/webdev-logo.svg";
 import swiftLogo from "@/assets/resources/ios/swift.png";
 import dsaLogo from "@/assets/resources/dsa/logo.png";
 import cyberLogo from "@/assets/resources/cyber/logo.png";
+import { StaticImageData } from "next/image";
 
-export const tracks = [
+export const tracks: {
+  name: string;
+  url: string;
+  desc: string;
+  image: StaticImageData;
+}[] = [
   {
     name: "Web Development",
     url: "web",

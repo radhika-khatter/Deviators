@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import deviatorsLogoMin from "@/assets/logo/sm.svg";
@@ -32,8 +31,8 @@ export default function Navigation() {
               href="/"
               className="flex-shrink-0 transition-transform duration-300 ease-in-out hover:scale-105"
             >
-              <Image
-                src={deviatorsLogoMin}
+              <img
+                src={deviatorsLogoMin.src}
                 alt="Deviators Logo"
                 className="h-6 w-auto md:h-7"
               />
