@@ -62,7 +62,6 @@ import Image59 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, 
 import Image60 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 325.jpg";
 import Image61 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 234.jpg";
 import Image62 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 326.jpg";
-import Image63 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 236.jpg";
 import Image64 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 327.jpg";
 import Image65 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 237.jpg";
 import Image66 from "@/assets/events/devolympus/Farrukhnagar, Gurugram, 122505, Haryana, India 328.jpg";
@@ -221,7 +220,6 @@ Join us next time to witness the triumph of creativity and technical excellence!
     Image60,
     Image61,
     Image62,
-    Image63,
     Image64,
     Image65,
     Image66,
@@ -308,5 +306,5 @@ Join us next time to witness the triumph of creativity and technical excellence!
     Image147,
     Image148,
   ],
-  index: 147,
+  index: 146,
 };
