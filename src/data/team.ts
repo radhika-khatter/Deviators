@@ -89,6 +89,7 @@ const team: {
       github: "https://github.com/agayushh",
       linkedin: "https://www.linkedin.com/in/ayush-goyal-b4491324b",
       twitter: "http://x.com/agayushh",
+      portfolio: "http://agayush.me/",
     },
     keywords: ["event", "lead", "founder", "web"],
   },
