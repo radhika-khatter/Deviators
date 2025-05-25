@@ -33,7 +33,7 @@ const team: {
   keywords: string[];
 }[] = [
   {
-    name: "Kanak Tanwar",
+    name: "OnlyKanak.com",
     roles: ["Club Lead", "AI lead", "Dsa team"],
     intro: "Can code in any language (if chatgpt is accessible)",
     urls: {
@@ -45,7 +45,7 @@ const team: {
     keywords: ["founder", "ai", "lead", "dsa"],
   },
   {
-    name: "Vivek Chahal",
+    name: "Andi Pak",
     roles: ["Co-lead", "IOS lead"],
     intro: "Interested in technology which no one uses.",
     urls: {
@@ -57,7 +57,7 @@ const team: {
     keywords: ["ios", "founder", "lead", "ios"],
   },
   {
-    name: "Pulkit",
+    name: "Hilal-e-Pulkit",
     roles: ["Chairperson", "Web lead"],
     intro: "Born to be CEO of Google, forced to be chairperson of Deviators",
     urls: {
@@ -70,7 +70,7 @@ const team: {
     keywords: ["chairperson", "founder", "lead", "web"],
   },
   {
-    name: "Krishna Kartikay Bhatt",
+    name: "Fauji",
     roles: ["Cyber Security Lead", "Event management"],
     intro: "Likes to put computer aside and talk about national duty",
     urls: {
@@ -81,7 +81,7 @@ const team: {
     keywords: ["cyber", "lead", "founder", "event"],
   },
   {
-    name: "Ayush Goyal",
+    name: "Chintu Goyal(cc)",
     roles: ["Event management Lead", "Team Coordinator", "Web Team"],
     intro: "Recruiter and intern at same company",
     image: Ayush,
@@ -94,7 +94,7 @@ const team: {
     keywords: ["event", "lead", "founder", "web"],
   },
   {
-    name: "Deepika Anand",
+    name: "Aloo Anand",
     roles: ["Women in Tech Lead", "Event management"],
     intro: "Is a member of Dead Poets Society…until the alarm goes off.",
     urls: {
@@ -105,7 +105,7 @@ const team: {
     keywords: ["women", "lead", "event"],
   },
   {
-    name: "Diksha Sharma",
+    name: "Dixy Scott",
     roles: ["UI/UX Lead", "Women in Tech"],
     intro:
       "An engineering student by profession, a cat whisperer by obsesssion.",
@@ -117,7 +117,7 @@ const team: {
     keywords: ["ui", "women", "lead"],
   },
   {
-    name: "Pooja Goel",
+    name: "Chooji Goel 🐧",
     roles: ["Web Team", "UI/UX Team", "Women in Tech"],
     intro: "Likes to keep her glasses foggy to ignore the world.",
     urls: {
@@ -128,7 +128,7 @@ const team: {
     keywords: ["web", "ui", "women"],
   },
   {
-    name: "Vidushi Anand",
+    name: "Bidushi Anand",
     roles: ["AI team", "Women in Tech"],
     intro: "Pray for my delulus to come true.",
     urls: {
@@ -140,7 +140,7 @@ const team: {
     keywords: ["ai", "women"],
   },
   {
-    name: "Manas Thakur",
+    name: "Kadu Bihaari",
     roles: ["AI team"],
     intro: "Prefer work over sleep and sleep over coffee",
     urls: {
@@ -152,7 +152,7 @@ const team: {
     keywords: ["ai"],
   },
   {
-    name: "Kunal Verma",
+    name: "Chotu Verma",
     roles: ["Social Media", "Web Team"],
     intro: "A unique fusion of dancer and coder.",
     urls: {
@@ -163,7 +163,7 @@ const team: {
     keywords: ["social", "web"],
   },
   {
-    name: "Tanmay Verma",
+    name: "Chamaar Verma",
     roles: ["Social Media", "Cyber Security Team", "Blockchain Team"],
     intro:
       "I'm like a bug in the matrix, but instead of being fixed, I add more bugs (and caffeine)!",
@@ -175,7 +175,7 @@ const team: {
     keywords: ["social", "cyber", "blockchain"],
   },
   {
-    name: "Yash Kumar",
+    name: "Stripper Kumar",
     roles: ["DSA team", "Event management"],
     intro: "Lost a staring competition with his dog once.",
     urls: {
@@ -186,7 +186,7 @@ const team: {
     keywords: ["dsa", "event"],
   },
   {
-    name: "Saurabh Singh",
+    name: "Lambu Singh",
     roles: ["DSA team"],
     intro: "Call for DSA support...or if your car breaks down.",
     urls: {
@@ -197,7 +197,7 @@ const team: {
     keywords: ["dsa"],
   },
   {
-    name: "Dipti Chahar",
+    name: "Jhajjar Queen",
     roles: ["DSA team", "Women in Tech"],
     intro: "Smashes DSA problems and shuttles with equal flair.",
     urls: {
@@ -208,7 +208,7 @@ const team: {
     keywords: ["dsa", "women"],
   },
   {
-    name: "Divyansh Sethi",
+    name: "Nashedi(Liver patient)",
     roles: ["DSA team", "Event management"],
     intro:
       "Lives in Choomantar Gali and has applied to get into Hogwarts 235 times.",
@@ -220,7 +220,7 @@ const team: {
     keywords: ["dsa", "event"],
   },
   {
-    name: "Bhavya Kataria",
+    name: "Bhabhi",
     roles: ["Social Media", "Designer", "Editor"],
     intro: "Not on tinder, but you can find me on discord",
     urls: {
@@ -231,7 +231,7 @@ const team: {
     keywords: ["social"],
   },
   {
-    name: "Aditya Yadav",
+    name: "Afk",
     roles: ["Editor"],
     image: Aditya,
     intro: "Can edit everything except your sessional scorecard",
