@@ -86,7 +86,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
-                href={"https://devolympus.deviatorsdce.tech"}
+                href={"https://forms.gle/Pd86V6uGVUEjfcMx5"}
                 className="w-full sm:w-auto"
               >
                 <motion.button
@@ -95,7 +95,7 @@ export default function HeroSection() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2 text-base font-medium sm:text-lg">
-                    Check our hackathon
+                    We are hiring!
                     <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                   <motion.div
