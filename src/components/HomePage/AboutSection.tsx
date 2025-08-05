@@ -35,7 +35,7 @@ export default function AboutSection() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-6 text-center text-3xl font-bold text-white sm:mb-10 sm:text-4xl lg:text-5xl"
+          className="mb-6 text-center font-pixelify text-3xl font-bold text-white sm:mb-10 sm:text-4xl lg:text-5xl"
         >
           About Deviators
         </motion.h2>
@@ -63,7 +63,7 @@ export default function AboutSection() {
               className="absolute inset-0 overflow-y-auto rounded-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 p-6 shadow-xl backdrop-blur-sm sm:p-12"
             >
               <div className="flex h-full flex-col items-center justify-center text-center">
-                <h3 className="mb-4 text-xl font-semibold text-white sm:mb-6 sm:text-2xl">
+                <h3 className="mb-4 font-pixelify text-xl font-semibold text-white sm:mb-6 sm:text-2xl">
                   {aboutItems[activeIndex].title}
                 </h3>
                 <p className="text-base leading-relaxed text-gray-300 sm:text-lg">

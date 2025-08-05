@@ -41,7 +41,7 @@ export default function LearnPage() {
           animate="visible"
           className="mb-16 space-y-6"
         >
-          <h1 className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-4xl font-extrabold text-transparent md:text-6xl lg:text-7xl">
+          <h1 className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center font-pixelify text-4xl font-extrabold text-transparent md:text-6xl lg:text-7xl">
             Learn with Us
           </h1>
           <p className="mx-auto max-w-2xl text-center text-lg font-medium text-gray-300">
@@ -72,7 +72,7 @@ export default function LearnPage() {
                         className="h-full w-full object-contain p-1"
                       />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-white">
+                    <CardTitle className="font-pixelify text-2xl font-bold text-white">
                       {track.name}
                     </CardTitle>
                   </div>

@@ -33,8 +33,8 @@ export default function TeamPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6 sm:space-y-8">
           <div>
-            <h2 className="text-3xl font-bold text-blue-400 sm:text-4xl">
-              Our Team
+            <h2 className="font-pixelify text-3xl font-bold text-blue-400 sm:text-4xl">
+              Meet Our Team
             </h2>
             <p className="mt-1 text-base text-gray-400 sm:mt-2 sm:text-lg">
               Meet the innovators behind Deviators Club

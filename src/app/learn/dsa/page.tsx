@@ -48,7 +48,7 @@ const DsaResources = () => {
           transition={{ duration: 0.8 }}
           className="mb-12 space-y-4 text-balance"
         >
-          <h1 className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-6xl lg:text-7xl">
+          <h1 className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-center font-pixelify text-4xl font-bold text-transparent md:text-6xl lg:text-7xl">
             Data Structures and Algorithms Resources
           </h1>
           <p className="mx-auto max-w-2xl text-center text-lg text-gray-300">
@@ -94,7 +94,7 @@ const DsaResources = () => {
               <TabsContent key={index} value={tab.key} className="space-y-4">
                 <Card className="border-purple-800 bg-black/50 transition-all duration-300 hover:bg-black/60">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-purple-400">
+                    <CardTitle className="font-pixelify text-2xl text-purple-400">
                       {tab.title}
                     </CardTitle>
                     <CardDescription className="text-gray-400">

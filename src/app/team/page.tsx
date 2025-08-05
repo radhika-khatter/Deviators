@@ -8,7 +8,7 @@ export default function TeamSection() {
     <section id="team" className="bg-[#1E1144] py-16 pt-20 lg:pt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
+          <h2 className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text font-pixelify text-3xl font-bold text-transparent md:text-4xl">
             Meet Our Team
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
@@ -31,7 +31,7 @@ export default function TeamSection() {
                     className="size-full rounded-full border-2 border-purple-500 object-cover"
                   />
                 </div>
-                <h3 className="mb-2 text-xl font-semibold text-white">
+                <h3 className="mb-2 font-pixelify text-2xl font-semibold text-white">
                   {member.name}
                 </h3>
                 <div className="mb-4 flex flex-wrap justify-center gap-2">

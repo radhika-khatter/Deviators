@@ -69,8 +69,10 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              <h1 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl lg:text-6xl">
-                DEVIATORS CLUB
+              <h1
+                className={`bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text font-pixelify text-xl font-bold text-transparent sm:text-4xl sm:text-6xl lg:text-5xl lg:text-7xl`}
+              >
+                Deviators Club
               </h1>
 
               <p className="max-w-xl text-xl text-gray-300 sm:text-2xl">
@@ -149,7 +151,9 @@ export default function HeroSection() {
                         <activity.icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <h3 className="mt-4 text-xl font-bold sm:text-2xl">
+                      <h3
+                        className={`mt-4 font-pixelify text-xl font-bold sm:text-4xl`}
+                      >
                         {activity.title}
                       </h3>
                       <p className="mt-2 text-sm text-gray-400 sm:text-base">

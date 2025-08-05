@@ -272,7 +272,7 @@ export default function ImageCarousel({ images }: CarouselProps) {
   return (
     <div className="w-full bg-[#1E1144] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <div className="mx-auto mb-4 max-w-4xl text-center sm:mb-6">
-        <h2 className="mb-1 text-2xl font-bold text-white sm:mb-2 sm:text-3xl md:text-4xl">
+        <h2 className="mb-1 font-pixelify text-2xl font-bold text-white sm:mb-2 sm:text-3xl md:text-4xl">
           View Our Gallery
         </h2>
         <p className="mb-4 text-sm text-gray-300 sm:text-base md:text-lg">

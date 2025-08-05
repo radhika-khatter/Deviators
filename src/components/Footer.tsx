@@ -7,7 +7,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-6">
           <div className="text-center">
-            <Link href="/" className="text-2xl font-bold text-white">
+            <Link
+              href="/"
+              className="font-pixelify text-2xl font-bold text-white"
+            >
               Deviators Club
             </Link>
             <p className="opacity-80">estd: 2024</p>

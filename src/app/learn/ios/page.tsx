@@ -24,7 +24,7 @@ export default function IosLearnPage() {
           transition={{ duration: 0.6 }}
           className="mb-12 space-y-4"
         >
-          <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-center text-4xl font-extrabold text-transparent md:text-5xl">
+          <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-center font-pixelify text-4xl font-extrabold text-transparent md:text-5xl">
             iOS Development Learning Resources
           </h1>
           <p className="mx-auto max-w-2xl text-center text-lg text-gray-300">
@@ -45,7 +45,7 @@ export default function IosLearnPage() {
               <Card>
                 <CardHeader className="p-6">
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-2xl font-semibold text-purple-400">
+                    <CardTitle className="font-pixelify text-2xl font-semibold text-purple-400">
                       {resource.name}
                     </CardTitle>
                     <Link href={resource.url} target="_blank">
